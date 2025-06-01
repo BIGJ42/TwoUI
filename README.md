@@ -30,7 +30,7 @@ chiteroman: Play Integrity Fix Module
 ---
 
 ## Installation Instructions
-
+Easier method below.
 ### 1. Patch your `boot.img` with Magisk
 
 To enable Magisk (and so OneUI features) and root access, you need to patch your device's `boot.img`:
@@ -52,3 +52,6 @@ To enable Magisk (and so OneUI features) and root access, you need to patch your
    fastboot flash boot magisk_patched.img
 '
 Or Flash in TWRP as Boot Image [DynaPatch Needed](https://t.me/dev_yilliee/215).
+
+Or you can just flash Magisk.apk (rename to Magisk.zip) from the link above and flash it in twrp.
+Then in the magisk app just click direct install.
