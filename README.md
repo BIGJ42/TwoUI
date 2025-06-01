@@ -11,6 +11,7 @@
 - Device spoofing as Samsung Galaxy S25 Ultra (for app compatibility and enhanced features)
 - Additional tweaks and enhancements to mimic One UI experience
 - Root access and systemless modifications through Magisk
+- Play integrity fix for google play
 
 ---
 
@@ -32,7 +33,7 @@ chiteroman: Play Integrity Fix Module
 
 ### 1. Patch your `boot.img` with Magisk
 
-To enable Magisk and root access, you need to patch your device's `boot.img`:
+To enable Magisk (and so OneUI features) and root access, you need to patch your device's `boot.img`:
 
 1. Download the `boot.img` file from your current ROM or device firmware.
 2. Transfer the `boot.img` to your device.
