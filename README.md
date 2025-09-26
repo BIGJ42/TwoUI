@@ -11,7 +11,6 @@
 - Device spoofing as Samsung Galaxy S25 Ultra (for app compatibility and enhanced features)
 - Additional tweaks and enhancements to mimic One UI experience
 - Root access and systemless modifications through Magisk
-- Play integrity fix for google play
 
 ---
 
@@ -23,35 +22,33 @@ chiteroman: Play Integrity Fix Module
 
 ## Requirements
 
-- A device compatible with GSIs
+- A device with LineageOS (or most other AOSP ROMS) installed.
 - Magisk installed on your device
-- Basic knowledge of ADB and fastboot
-
+- Basic knowledge of rooting and custom romming devices.
 ---
 
 ## Installation Instructions
-Easier method below.
-### 1. Patch your `boot.img` with Magisk
 
-To enable Magisk (and so OneUI features) and root access, you need to patch your device's `boot.img`:
+1. Download the [Magisk app](https://github.com/topjohnwu/Magisk/releases/tag/v29.0) on your device.
+2. In AOSP recovery, install the Magisk APK as a zip.
+3. Boot back into the system and install the app. (If it is already there without an icon, open it and follow instructions).
+4. Download all the files in the latest release.
+5. Once inside the Magisk app, Select **Install** > **Install** > **Direct Install**.
+6. Install the OneUI experience module. (Dont reboot just yet).
+7. Install the MT Manager app and grant it root access.
+8. Install the OneUICore Magisk module.
+9. Open the MT Manager app and scroll until you see the optionals.prop file.
+10. Click to edit the file.
+11. insert into the file (without quotation marks) "oneui.recents=1" and save the file.
+12. Go back to magisk and install the OneUIHome magisk module.
+13. Reboot your device.
+14. You may have to go to settings via the quick settings panel after reboot if the pixel launcher/default launcher is crashing in order to set One UI Home as the default launcher.
+15. Enjoy!
 
-1. Download the `boot.img` file from your current ROM or device firmware.
-2. Transfer the `boot.img` to your device.
-3. Open the [Magisk app](https://github.com/topjohnwu/Magisk/releases/tag/v29.0) on your device.
-4. Select **Install** > **Install** > **Select and Patch a File**.
-5. Choose the `boot.img` file you transferred.
-6. Magisk will patch the image and save it as `magisk_patched.img` in your device's `Download` folder.
-7. Transfer `magisk_patched.img` back to your PC.
-
-### 2. Flash the patched boot image
-
-1. Reboot your device into recovery/bootloader/fastboot mode.
-2. Flash the patched image with the following command:
-
-   ```bash
-   fastboot flash boot magisk_patched.img
-'
-Or Flash in TWRP as Boot Image [DynaPatch Needed](https://t.me/dev_yilliee/215).
-
-Or you can just flash Magisk.apk (rename to Magisk.zip) from the link above and flash it in twrp.
-Then in the magisk app just click direct install.
+## Optional Features:
+---
+## Device Spoofing as Samsung Galaxy S25 Ultra:
+1. Download the Galaxy_S25_Ultra_Spoof.zip file.
+2. Install it in Magisk.
+THIS IS IN BETA. IT MAY NOT WORK. IT MAY CAUSE CRASHES.
+I am not repsonsible for any damage caused to your device by following this guide.
